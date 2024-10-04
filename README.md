@@ -1,7 +1,7 @@
 
 ---
 
-# Scientific Project: Data Ingestion, Preprocessing, and Analysis Pipeline
+# Gambling Project: Data Ingestion, Preprocessing, and Analysis Pipeline
 
 ## Overview
 
