@@ -1,0 +1,31 @@
+# Byte-compiled Python files
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments (if you're using a venv or conda environment)
+venv/
+.venv/
+env/
+conda_env/
+*.env
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Database files (optional)
+*.db
+
+# Ignore data or large files (optional, depending on what you’re working with)
+data/
+datasets/
+*.csv
+*.xls
+*.xlsx
+*.json
+
+# Ignore system files
+.DS_Store
