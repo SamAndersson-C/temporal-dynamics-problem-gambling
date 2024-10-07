@@ -70,10 +70,12 @@ project_directory/
 │   │   ├── 12_rg_actions_truncate_table_30_days.sql
 │   │   ├── 13_rg_actions_truncate_table_60_days.sql
 │   │   ├── 14_rg_actions_truncate_table_90_days.sql
-│   │   ├── 15_sessions_truncate_table_30_days.sql
-│   │   ├── 16_sessions_truncate_table_60_days.sql
-│   │   ├── 17_sessions_truncate_table_90_days.sql
-│   │   └── 18_rg_predictions_truncate_table_90_days.sql
+│   │   ├── 15_rg_predictions_truncate_table_30_days.sql
+│   │   ├── 16_rg_predictions_truncate_table_60_days.sql
+│   │   ├── 17_rg_predictions_truncate_table_90_days.sql
+│   │   ├── 18_sessions_truncate_table_30_days.sql
+│   │   ├── 19_sessions_truncate_table_60_days.sql
+│   │   └── 20_sessions_truncate_table_90_days.sql
 │   │
 │   ├── 04_feature_engineering/    # SQL scripts for feature engineering
 │   │   ├── 00_feature_engineer_background_train.sql
@@ -173,16 +175,18 @@ This folder contains SQL scripts for truncating user activity data to specific p
 - **06_transactions_truncate_table_30_days.sql**: Truncates the transactions table for the last 30 days.
 - **07_transactions_truncate_table_60_days.sql**: Truncates the transactions table for the last 60 days.
 - **08_transactions_truncate_table_90_days.sql**: Truncates the transactions table for the last 90 days.
-- **09_loss_chasing_truncate_table_30_days.sql**: Truncates loss-chasing data for the last 30 days.
-- **10_loss_chasing_truncate_table_60_days.sql**: Truncates loss-chasing data for the last 60 days.
-- **11_loss_chasing_truncate_table_90_days.sql**: Truncates loss-chasing data for the last 90 days.
+- **09_loss_chasing_truncate_table_30_days.sql**: Truncates the loss-chasing data for the last 30 days.
+- **10_loss_chasing_truncate_table_60_days.sql**: Truncates the loss-chasing data for the last 60 days.
+- **11_loss_chasing_truncate_table_90_days.sql**: Truncates the loss-chasing data for the last 90 days.
 - **12_rg_actions_truncate_table_30_days.sql**: Truncates responsible gambling actions data for the last 30 days.
 - **13_rg_actions_truncate_table_60_days.sql**: Truncates responsible gambling actions data for the last 60 days.
 - **14_rg_actions_truncate_table_90_days.sql**: Truncates responsible gambling actions data for the last 90 days.
-- **15_sessions_truncate_table_30_days.sql**: Truncates session data for the last 30 days.
-- **16_sessions_truncate_table_60_days.sql**: Truncates session data for the last 60 days.
-- **17_sessions_truncate_table_90_days.sql**: Truncates session data for the last 90 days.
-- **18_rg_predictions_truncate_table_90_days.sql**: Truncates responsible gambling prediction data for the last 90 days.
+- **15_rg_predictions_truncate_table_30_days.sql**: Truncates responsible gambling prediction data for the last 30 days.
+- **16_rg_predictions_truncate_table_60_days.sql**: Truncates responsible gambling prediction data for the last 60 days.
+- **17_rg_predictions_truncate_table_90_days.sql**: Truncates responsible gambling prediction data for the last 90 days.
+- **18_sessions_truncate_table_30_days.sql**: Truncates session data for the last 30 days.
+- **19_sessions_truncate_table_60_days.sql**: Truncates session data for the last 60 days.
+- **20_sessions_truncate_table_90_days.sql**: Truncates session data for the last 90 days.
 
 ### `04_feature_engineering/`
 
