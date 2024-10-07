@@ -5,7 +5,7 @@ __pycache__/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-# Virtual environments (if you're using a venv or conda environment)
+# Virtual environments 
 venv/
 .venv/
 env/
@@ -16,10 +16,10 @@ conda_env/
 *.log
 *.tmp
 
-# Database files (optional)
+# Database files 
 *.db
 
-# Ignore data or large files (optional, depending on what you’re working with)
+# Ignore data or large files 
 data/
 datasets/
 *.csv
