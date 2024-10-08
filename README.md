@@ -13,7 +13,7 @@ This project automates a full data pipeline for ingesting raw data, performing p
 project_directory/
 ├── notebooks/                     # Jupyter notebooks for analysis and exploration
 │   ├── final_tuning_notebook.ipynb
-│   ├── final_modelling_notebook.ipynb
+│   ├── final8_modelling_notebook.ipynb
 │   ├── final_preprocessing_and_selection_notebook.ipynb
 │   ├── final_statistical_analysis.ipynb
 │   └── final_statistical_analysis_notebook.ipynb
@@ -70,49 +70,34 @@ project_directory/
 │   │   ├── 12_rg_actions_truncate_table_30_days.sql
 │   │   ├── 13_rg_actions_truncate_table_60_days.sql
 │   │   ├── 14_rg_actions_truncate_table_90_days.sql
-│   │   ├── 15_rg_predictions_truncate_table_30_days.sql
-│   │   ├── 16_rg_predictions_truncate_table_60_days.sql
-│   │   ├── 17_rg_predictions_truncate_table_90_days.sql
-│   │   ├── 18_sessions_truncate_table_30_days.sql
-│   │   ├── 19_sessions_truncate_table_60_days.sql
-│   │   └── 20_sessions_truncate_table_90_days.sql
+│   │   ├── 15_sessions_truncate_table_30_days.sql
+│   │   ├── 16_sessions_truncate_table_60_days.sql
+│   │   └── 17_sessions_truncate_table_90_days.sql
 │   │
 │   ├── 04_feature_engineering/    # SQL scripts for feature engineering
 │   │   ├── 00_feature_engineer_background_train.sql
-│   │   ├── 01_deposits_minus_withdrawals.sql
-│   │   ├── 02_feature_engineer_background_test.sql
-│   │   ├── 03_feature_engineer_bets_30d_train.sql
-│   │   ├── 04_feature_engineer_bets_60d_train.sql
-│   │   ├── 05_feature_engineer_bets_90d_train.sql
-│   │   ├── 06_feature_engineer_bets_train.sql
-│   │   ├── 07_feature_engineer_bets_30d_test.sql
-│   │   ├── 08_feature_engineer_bets_60d_test.sql
-│   │   ├── 09_feature_engineer_bets_90d_test.sql
-│   │   ├── 10_feature_engineer_bets_test.sql
-│   │   ├── 11_feature_engineer_transactions_30d_train.sql
-│   │   ├── 12_feature_engineer_transactions_60d_train.sql
+│   │   ├── 01_feature_engineer_background_test.sql
+│   │   ├── 02_deposits_minus_withdrawals.sql
+│   │   ├── 03_feature_engineer_bets_train.sql
+│   │   ├── 04_feature_engineer_bets_30d_train.sql
+│   │   ├── 05_feature_engineer_bets_60d_train.sql
+│   │   ├── 06_feature_engineer_bets_90d_train.sql
+│   │   ├── 07_feature_engineer_bets_test.sql
+│   │   ├── 08_feature_engineer_payments_train.sql
+│   │   ├── 09_feature_engineer_payments_30d_train.sql
+│   │   ├── 10_feature_engineer_payments_60d_train.sql
+│   │   ├── 11_feature_engineer_payments_90d_train.sql
+│   │   ├── 12_feature_engineer_payments_test.sql
 │   │   ├── 13_feature_engineer_transactions_train.sql
-│   │   ├── 14_feature_engineer_transactions_30d_test.sql
-│   │   ├── 15_feature_engineer_transactions_60d_test.sql
-│   │   ├── 16_feature_engineer_transactions_test.sql
-│   │   ├── 17_feature_engineer_rg_actions_30d_train.sql
-│   │   ├── 18_feature_engineer_rg_actions_60d_train.sql
-│   │   ├── 19_feature_engineer_rg_actions_90d_train.sql
-│   │   ├── 20_feature_engineer_rg_actions_train.sql
-│   │   ├── 21_feature_engineer_rg_actions_30d_test.sql
-│   │   ├── 22_feature_engineer_rg_actions_60d_test.sql
-│   │   ├── 23_feature_engineer_rg_actions_90d_test.sql
-│   │   ├── 24_feature_engineer_rg_actions_test.sql
-│   │   ├── 25_feature_engineer_rg_predictions_30d_train.sql
-│   │   ├── 26_feature_engineer_rg_predictions_60d_train.sql
-│   │   ├── 27_feature_engineer_rg_predictions_90d_train.sql
-│   │   ├── 28_feature_engineer_rg_predictions_train.sql
-│   │   ├── 29_feature_engineer_rg_predictions_30d_test.sql
-│   │   ├── 30_feature_engineer_rg_predictions_60d_test.sql
-│   │   ├── 31_feature_engineer_rg_predictions_90d_test.sql
-│   │   ├── 32_feature_engineer_rg_predictions_test.sql
-│   │   ├── 33_feature_engineer_multiple_accounts_train.sql
-│   │   ├── 34_feature_engineer_multiple_accounts_test.sql
+│   │   ├── 14_feature_engineer_transactions_30d_train.sql
+│   │   ├── 15_feature_engineer_transactions_60d_train.sql
+│   │   ├── 16_feature_engineer_transactions_90d_train.sql
+│   │   ├── 17_feature_engineer_transactions_test.sql
+│   │   ├── 18_feature_engineer_rg_actions_train.sql
+│   │   ├── 19_feature_engineer_rg_actions_30d_test.sql
+│   │   ├── 20_feature_engineer_rg_actions_60d_test.sql
+│   │   ├── 21_feature_engineer_rg_actions_90d_test.sql
+│   │   ├── 22_feature_engineer_rg_actions_test.sql
 │
 ├── requirements.txt               # Python dependencies
 ├── README.md                      # Main project documentation
@@ -181,52 +166,38 @@ This folder contains SQL scripts for truncating user activity data to specific p
 - **12_rg_actions_truncate_table_30_days.sql**: Truncates responsible gambling actions data for the last 30 days.
 - **13_rg_actions_truncate_table_60_days.sql**: Truncates responsible gambling actions data for the last 60 days.
 - **14_rg_actions_truncate_table_90_days.sql**: Truncates responsible gambling actions data for the last 90 days.
-- **15_rg_predictions_truncate_table_30_days.sql**: Truncates responsible gambling prediction data for the last 30 days.
-- **16_rg_predictions_truncate_table_60_days.sql**: Truncates responsible gambling prediction data for the last 60 days.
-- **17_rg_predictions_truncate_table_90_days.sql**: Truncates responsible gambling prediction data for the last 90 days.
-- **18_sessions_truncate_table_30_days.sql**: Truncates session data for the last 30 days.
-- **19_sessions_truncate_table_60_days.sql**: Truncates session data for the last 60 days.
-- **20_sessions_truncate_table_90_days.sql**: Truncates session data for the last 90 days.
+- **15_sessions_truncate_table_30_days.sql**: Truncates session data for the last 30 days.
+- **16_sessions_truncate_table_60_days.sql**: Truncates session data for the last 60 days.
+- **17_sessions_truncate_table_90_days.sql**: Truncates session data for the last 90 days.
 
 ### `04_feature_engineering/`
 
 This folder contains SQL scripts for feature engineering. These scripts create new features from raw data to be used in downstream machine learning models. The scripts handle both training and testing data, and they generate features based on various time windows (30, 60, 90 days).
 
 - **00_feature_engineer_background_train.sql**: Feature engineering on background data for the training set.
-- **01_deposits_minus_withdrawals.sql**: Calculates the net balance of deposits minus withdrawals.
-- **02_feature_engineer_background_test.sql**: Feature engineering on background data for the test set.
-- **03_feature_engineer_bets_30d_train.sql**: Feature engineering on bets data for the last 30 days (training set).
-- **04_feature_engineer_bets_60d_train.sql**: Feature engineering on bets data for the last 60 days (training set).
-- **05_feature_engineer_bets_90d_train.sql**: Feature engineering on bets data for the last 90 days (training set).
-- **06_feature_engineer_bets_train.sql**: General feature engineering on bets data for the training set.
-- **07_feature_engineer_bets_30d_test.sql**: Feature engineering on bets data for the last 30 days (test set).
-- **08_feature_engineer_bets_60d_test.sql**: Feature engineering on bets data for the last 60 days (test set).
-- **09_feature_engineer_bets_90d_test.sql**: Feature engineering on bets data for the last 90 days (test set).
-- **10_feature_engineer_bets_test.sql**: General feature engineering on bets data for the test set.
-- **11_feature_engineer_transactions_30d_train.sql**: Feature engineering on transactions for the last 30 days (training set).
-- **12_feature_engineer_transactions_60d_train.sql**: Feature engineering on transactions for the last 60 days (training set).
+- **01_feature_engineer_background_test.sql**: Feature engineering on background data for the test set.
+- **02_deposits_minus_withdrawals.sql**: Calculates the net balance of deposits minus withdrawals.
+- **03_feature_engineer_bets_train.sql**: General feature engineering on bets data for the training set.
+- **04_feature_engineer_bets_30d_train.sql**: Feature engineering on bets data for the last 30 days (training set).
+- **05_feature_engineer_bets_60d_train.sql**: Feature engineering on bets data for the last 60 days (training set).
+- **06_feature_engineer_bets_90d_train.sql**: Feature engineering on bets data for the last 90 days (training set).
+- **07_feature_engineer_bets_test.sql**: General feature engineering on bets data for the test set.
+- **08_feature_engineer_payments_train.sql**: General feature engineering on payments data (training set).
+- **09_feature_engineer_payments_30d_train.sql**: Feature engineering on payments for the last 30 days (training set).
+- **10_feature_engineer_payments_60d_train.sql**: Feature engineering on payments for the last 60 days (training set).
+- **11_feature_engineer_payments_90d_train.sql**: Feature engineering on payments for the last 90 days (training set).
+- **12_feature_engineer_payments_test.sql**: General feature engineering on payments data (test set).
 - **13_feature_engineer_transactions_train.sql**: General feature engineering on transactions data (training set).
-- **14_feature_engineer_transactions_30d_test.sql**: Feature engineering on transactions for the last 30 days (test set).
-- **15_feature_engineer_transactions_60d_test.sql**: Feature engineering on transactions for the last 60 days (test set).
-- **16_feature_engineer_transactions_test.sql**: General feature engineering on transactions data (test set).
-- **17_feature_engineer_rg_actions_30d_train.sql**: Feature engineering on responsible gambling actions data for the last 30 days (training set).
-- **18_feature_engineer_rg_actions_60d_train.sql**: Feature engineering on responsible gambling actions data for the last 60 days (training set).
-- **19_feature_engineer_rg_actions_90d_train.sql**: Feature engineering on responsible gambling actions data for the last 90 days (training set).
-- **20_feature_engineer_rg_actions_train.sql**: General feature engineering on responsible gambling actions data (training set).
-- **21_feature_engineer_rg_actions_30d_test.sql**: Feature engineering on responsible gambling actions data for the last 30 days (test set).
-- **22_feature_engineer_rg_actions_60d_test.sql**: Feature engineering on responsible gambling actions data for the last 60 days (test set).
-- **23_feature_engineer_rg_actions_90d_test.sql**: Feature engineering on responsible gambling actions data for the last 90 days (test set).
-- **24_feature_engineer_rg_actions_test.sql**: General feature engineering on responsible gambling actions data (test set).
-- **25_feature_engineer_rg_predictions_30d_train.sql**: Feature engineering on responsible gambling predictions data for the last 30 days (training set).
-- **26_feature_engineer_rg_predictions_60d_train.sql**: Feature engineering on responsible gambling predictions data for the last 60 days (training set).
-- **27_feature_engineer_rg_predictions_90d_train.sql**: Feature engineering on responsible gambling predictions data for the last 90 days (training set).
-- **28_feature_engineer_rg_predictions_train.sql**: General feature engineering on responsible gambling predictions data (training set).
-- **29_feature_engineer_rg_predictions_30d_test.sql**: Feature engineering on responsible gambling predictions data for the last 30 days (test set).
-- **30_feature_engineer_rg_predictions_60d_test.sql**: Feature engineering on responsible gambling predictions data for the last 60 days (test set).
-- **31_feature_engineer_rg_predictions_90d_test.sql**: Feature engineering on responsible gambling predictions data for the last 90 days (test set).
-- **32_feature_engineer_rg_predictions_test.sql**: General feature engineering on responsible gambling predictions data (test set).
-- **33_feature_engineer_multiple_accounts_train.sql**: Feature engineering on multiple accounts data (training set).
-- **34_feature_engineer_multiple_accounts_test.sql**: Feature engineering on multiple accounts data (test set).
+- **14_feature_engineer_transactions_30d_train.sql**: Feature engineering on transactions for the last 30 days (training set).
+- **15_feature_engineer_transactions_60d_train.sql**: Feature engineering on transactions for the last 60 days (training set).
+- **16_feature_engineer_transactions_90d_train.sql**: Feature engineering on transactions for the last 90 days (training set).
+- **17_feature_engineer_transactions_test.sql**: General feature engineering on transactions data (test set).
+- **18_feature_engineer_rg_actions_train.sql**: General feature engineering on responsible gambling actions data (training set).
+- **19_feature_engineer_rg_actions_30d_train.sql**: Feature engineering on responsible gambling actions data for the last 30 days (training set).
+- **20_feature_engineer_rg_actions_60d_train.sql**: Feature engineering on responsible gambling actions data for the last 60 days (training set).
+- **21_feature_engineer_rg_actions_90d_train.sql**: Feature engineering on responsible gambling actions data for the last 90 days (training set).
+- **22_feature_engineer_rg_actions_test.sql**: General feature engineering on responsible gambling actions data (test set).
+
 
 ## Python Scripts in `scripts/`
 
