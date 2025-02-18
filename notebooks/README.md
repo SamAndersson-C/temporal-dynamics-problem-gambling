@@ -1,1 +1,1 @@
-NB: Updated notebooks pending stand by for upload.
+NB: Updated notebooks.
