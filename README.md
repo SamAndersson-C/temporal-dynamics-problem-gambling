@@ -13,7 +13,7 @@ This project automates a full data pipeline for ingesting raw data, performing p
 project_directory/
 ├── notebooks/                     # Jupyter notebooks for analysis and exploration
 │   ├── final_tuning_notebook.ipynb
-│   ├── final8_modelling_notebook.ipynb
+│   ├── final_modelling_notebook.ipynb
 │   ├── final_preprocessing_and_selection_notebook.ipynb
 │   ├── final_statistical_analysis.ipynb
 │   └── final_statistical_analysis_notebook.ipynb
